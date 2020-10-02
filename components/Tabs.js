@@ -18,7 +18,7 @@ function result(){
     axios.get('https://lambda-times-api.herokuapp.com/topics')
         .then(res => {
             const tabTopic = res.data.topics
-            console.log(tabTopic)
+            // console.log(tabTopic)
             tabTopic.forEach(tab => {
                 const tabCard = tabMaker(tab)
                 entryPoint.appendChild(tabCard)
@@ -46,5 +46,4 @@ function tabMaker(topic) {
     return tab;
 
 }
-
-// console.log(tabMaker())
+tabMaker()
