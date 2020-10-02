@@ -14,7 +14,7 @@
 function Header() {
 
     const entryPoint = document.querySelector('.header-container');
-    console.log(entryPoint)
+    // console.log(entryPoint)
 
     // Instantiate elements
     const header = document.createElement('div');
