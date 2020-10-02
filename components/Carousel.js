@@ -41,7 +41,9 @@ function carouselMaker(){
   imageThree.src = 'https://tk-assets.lambdaschool.com/5b7441c6-6e4b-4feb-a4ec-8dd2eb76238a_trees.jpeg'
   imageFour.src = 'https://tk-assets.lambdaschool.com/0b770382-d0eb-4465-8bf2-692a79fcda71_turntable.jpeg'
   leftButton.classList.add('left-button')
+  leftButton.textContent = '+'
   rightButton.classList.add('right-button')
+  rightButton.textContent = '+'
 
   // Create hierarchy 
   carousel.appendChild(leftButton)
@@ -50,6 +52,16 @@ function carouselMaker(){
   carousel.appendChild(imageThree)
   carousel.appendChild(imageFour)
   carousel.appendChild(rightButton)
+
+  // Event listeners
+  leftButton.addEventListener('click', () => {
+    leftButton.classList.toggle('slider-button')
+  })
+  rightButton.addEventListener('click', () => {
+    rightButton.classList.toggle('slider-button')
+  })
+
+  // console.log(carousel)
 
   return carousel;
 }
