@@ -56,6 +56,8 @@ function carouselMaker(){
   carousel.appendChild(imageFour)
   carousel.appendChild(rightButton)
 
+  // Create current index
+
   // Event listeners
   leftButton.addEventListener('click', () => {
     leftButton.classList.toggle('slider-button')
@@ -64,10 +66,11 @@ function carouselMaker(){
     rightButton.classList.toggle('slider-button')
   })
 
+  // Append
   const entryPoint = document.querySelector('.carousel-container')
   entryPoint.appendChild(carousel)
 
-  console.log(carousel)
+  // console.log(carousel)
 
   return carousel;
 }
