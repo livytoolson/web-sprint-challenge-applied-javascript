@@ -13,18 +13,36 @@
 const entryPoint = document.querySelector('.title');
 // console.log(entryPoint);
 
-axios.get('https://lambda-times-api.herokuapp.com/topics')
-    .then(res => {
-        const tabTopicArr = res.data;
-        console.log(res.data)
-        tabTopicArr.forEach(tab => {
-            const tabCard = tabMaker(tab)
-            entryPoint.appendChild(tabCard);
+function result(){
+    axios.get('https://lambda-times-api.herokuapp.com/topics')
+        .then(res => {
+            const tabTopic = res.data
+            console.log(tabTopic)
+            tabTopic.forEach(topic => {
+                const tabCard = tabMaker(topic)
+                entryPoint.appendChild(tabCard)
+            })
         })
-    // });
-    // .catch(err => {
-    //     console.log(err);
-    });
+        .catch(err => {
+            console.log(err)
+        })
+}
+result();
+
+// axios.get('https://lambda-times-api.herokuapp.com/topics')
+//     .then(res => {
+//         const tabTopic = res.data;
+//         // console.log(res.data)
+//         tabTopic.forEach(topic => {
+//             const tabCard = tabMaker(topic)
+//             // make tabs
+//             entryPoint.appendChild(tabCard)
+//             // append to the DOM
+//         })
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
 
 function tabMaker(topic) {
     
