@@ -23,6 +23,9 @@
   </div>
 */
 
+const entryPoint = document.querySelector('.carousel-container')
+// console.log(entryPoint)
+
 function carouselMaker(){
 
   // Instantiate Elements
@@ -41,9 +44,9 @@ function carouselMaker(){
   imageThree.src = 'https://tk-assets.lambdaschool.com/5b7441c6-6e4b-4feb-a4ec-8dd2eb76238a_trees.jpeg'
   imageFour.src = 'https://tk-assets.lambdaschool.com/0b770382-d0eb-4465-8bf2-692a79fcda71_turntable.jpeg'
   leftButton.classList.add('left-button')
-  leftButton.textContent = '+'
+  leftButton.textContent = '<'
   rightButton.classList.add('right-button')
-  rightButton.textContent = '+'
+  rightButton.textContent = '>'
 
   // Create hierarchy 
   carousel.appendChild(leftButton)
@@ -61,7 +64,10 @@ function carouselMaker(){
     rightButton.classList.toggle('slider-button')
   })
 
-  // console.log(carousel)
+  const entryPoint = document.querySelector('.carousel-container')
+  entryPoint.appendChild(carousel)
+
+  console.log(carousel)
 
   return carousel;
 }
